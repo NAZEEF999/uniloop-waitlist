@@ -1,0 +1,8 @@
+# Supabase CLI configuration (only the parts this project needs).
+# Run `supabase init` once if you want the full generated config for local development.
+
+[functions.submit-waitlist]
+# The endpoint is deliberately public (called by anonymous visitors) and does its own
+# validation, honeypot and rate-limiting. This also makes it work with the newer
+# publishable API keys, which are not JWTs.
+verify_jwt = false

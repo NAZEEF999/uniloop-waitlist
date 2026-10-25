@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* Brand colors */
+  --color-navy: #102A43;        /* Deep Navy: headings, navigation */
+  --color-green: #71E6A3;       /* Fresh Green: primary buttons, selected states */
+  --color-softWhite: #F5F7FA;   /* Soft White: light backgrounds */
+  /* White is Tailwind's built-in `white` (#FFFFFF) */
+
+  /* Darker green used only for small text/icons on white (contrast) */
+  --color-greenDark: #0B7A4B;
+
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-navy);
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-navy);
+    outline-offset: 2px;
+  }
+}
